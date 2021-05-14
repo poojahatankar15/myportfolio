@@ -1,0 +1,171 @@
+@charset "utf-8";
+body {
+	background-color: #FBF76D;
+	margin: 0;
+	font-family: cursive;
+}
+
+.nav {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #071293;
+    text-align: center;
+    border-top: medium double #F8060A;
+	border-bottom: medium double #F8060A;
+	padding: 5px;
+	list-style:none;
+    margin:0px;
+	
+}
+
+.nav li{
+    display:inline;
+	padding-left:20px;
+    padding-right:20px;
+}
+
+.nav a{
+    display:inline-block;
+    padding:10px;
+	text-decoration: none;
+
+}
+
+a:hover {
+  background-color: darksalmon;
+}
+
+img {
+	border: 2px solid #F8060A;
+	border-radius: 15px;
+}
+
+.right {
+  position: absolute;
+  right: 360px;
+}
+
+.left1 {
+  position: absolute;
+  right: 750px;
+  top:240px;
+  font-size: 40px;
+  font-style: oblique;
+  color: #071293;
+}
+
+.left2 {
+  position: absolute;
+  right: 750px;
+  top:290px;
+  font-size: 40px;
+  font-style: oblique;
+  color: #071293;
+}
+
+.sub1 {
+  position: absolute;
+  right: 750px;
+  top:356px;
+  font-size: 20px;
+  color: #071293;
+}
+
+.sub2 {
+  position: absolute;
+  right: 750px;
+  top:390px;
+  font-size: 20px;
+  color: #071293;
+}
+
+.quote {
+  position: absolute;
+  left:90px;
+  top:620px;
+  font-size: 20px;
+  color: #071293;
+}
+
+p {
+   font-family: cursive;
+   font-size: 16px;
+   color: #071293;
+   text-align: justify;
+   max-width: 600px;
+   margin-left: 380px;
+}
+
+h3 {
+   font-family: cursive;
+   margin: 35px auto;
+   text-align: center;
+   color: #071293;
+   font-size: 30px;
+   max-width: 600px;
+   position: relative;
+      }
+
+h3:before {
+   content: "";
+   display: block;
+   width: 180px;
+   height: 5px;
+   background: #CD5C5C;
+   left: 30px;
+   top: 50%;
+   position: absolute;
+      }
+
+h3:after {
+   content: "";
+   display: block;
+   width: 180px;
+   height: 5px;
+   background: #CD5C5C;
+   right: 30px;
+   top: 50%;
+   position: absolute;
+      }
+
+.hello {
+	font-size: 25px;
+	font-style: oblique;
+}
+
+table {
+	color: #071293;
+	border-spacing: 10px;
+	font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=email], [type=number] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=submit], [type=button] {
+  background-color: #F8060A;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%;
+}
