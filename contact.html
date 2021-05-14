@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.footer {
+   position: absolute;
+   left: 0;
+   top: 650px;
+   width: 100%;
+   font-family: Times New Roman;
+   font-size: 16px;
+   color: #071293;
+   text-align: center;
+   border-style: double none;
+   border-color: #F8060A;
+   padding: 10px;
+}
+	
+.form {
+	position: absolute;
+	left: 300px;
+	}
+	
+.contact {
+	position: absolute;
+	right: 200px;
+	top:270px;
+	}
+</style>
+</head>
+
+<body>
+<nav class="nav"> 
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Me</a></li>
+  <li><a href="qualification.html">Qualification</a></li>
+  <li><a href="project.html">Projects</a></li>
+  <li><a href="experience.html">Experience</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</nav>
+<br><br>
+	
+	<h3> Contact Me </h3>
+	
+<table width="30%" border="0" class="form">
+ <tbody>
+	<form method="post" autocomplete="off" name="google-sheet" id="myForm">
+    <tr>
+      <td><input type="text" name="Name" placeholder="Your Name"></td>
+    </tr>
+    <tr>
+      <td><input type="email" name="Email" placeholder="Your Email Address"></td>
+    </tr>
+    <tr>
+      <td><input type="number" name="Phone" placeholder="Your Phone Number"></td>
+    </tr>
+    <tr>
+      <td><textarea name="Message" placeholder="Your Message"></textarea></td>
+    </tr>
+	 <tr>
+      <td><input type="submit" name="submit">
+	  <input type="button" onclick="myFunction()" Value="Reset"></td>
+    </tr>	
+  </form>
+</tbody>
+</table>
+	
+<script>
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+</script>
+	
+<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbzbKi9Pb8n1TKpfAZxRe-6fpCsp9jxEb3djhxCSTTj2LLlcOC3bpPFRs36BBtIDaiopAA/exec'
+            const form = document.forms['google-sheet']
+          
+   form.addEventListener('submit', e => {
+   e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+   .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+   .catch(error => console.error('Error!', error.message))
+       })
+</script>
+	
+	<table width="30%" border="0" class="contact">
+  <tbody>
+    <tr>
+      <td style="font-size:20px"><i class="material-icons" style="font-size:30px;color:red">place</i>&nbsp;&nbsp;&nbsp;Mumbai, Maharashtra </td>
+    </tr>
+    <tr>
+      <td><i class="material-icons" style="font-size:30px;color:red">email</i>&nbsp;&nbsp;&nbsp;poojahatankar1512@gmail.com</td>
+    </tr>
+    <tr>
+      <td><i class="material-icons" style="font-size:30px;color:red">business</i>&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/pooja-hatankar-825a58211/" style="text-decoration: none;">LinkedIn</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<footer class="footer">&#169; 2021 by Pooja Hatankar</footer>
+</body>
+</html>
